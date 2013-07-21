@@ -1,0 +1,9 @@
+	<tr class="webapp" onclick="document.location='<%= "/messages/#{message.id}" %>'" style="cursor:pointer; text-align:left">
+		<td class="from_mail webapp"><%= message.sender %></td>
+		<td class="subject_mail webapp"><%= message.subject.length > 60 ? "#{message.subject[0..60]} ..." : message.subject %></td>
+		<% 
+		date = message.date.split('T')[0].gsub("-", "/")
+		hour = message.date.split('T')[1].split('+')[0]
+		%>
+		<td class="date_mail webapp"><%= "#{date} - #{hour}" %></td>
+	</tr>

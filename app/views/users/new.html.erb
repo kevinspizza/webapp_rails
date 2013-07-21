@@ -1,0 +1,16 @@
+<div id="inbox_container">
+  <div id="inbox_header">
+    <% if flash[:error] && !flash[:error].blank? %>
+      	<p id="error"><%= flash[:error] %></p>
+    <% else %>
+      	<p id="notice"><%= notice %></p>
+    <% end %>
+    <p>
+    	<h1>Register new account</h1>
+	</p>
+	<p>
+		<%= link_to 'Back', signin_path %>
+	</p>
+  </div>
+	<%= render 'form' %>
+</div>

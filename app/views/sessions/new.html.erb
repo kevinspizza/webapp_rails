@@ -1,0 +1,31 @@
+<% if signed_in? %> <!-- if signed in -> redirect to inbox -->
+<h1>Redirection boite mail</h1>
+
+  <script type="text/javascript">
+    window.location.href="users/<%= @current_user.id %>"
+  </script>
+<% end %>
+
+<div id="inbox_container">
+  <div id="inbox_header">
+    <h1>Identification</h1>
+    <% if !flash[:notice].blank? %>
+    <p><%= flash[:notice] %><p>
+    <% end %>
+    <p>New account ? <%= link_to "Sign up now", signup_path %></p>
+  </div>
+
+<%= form_for(:session, :url => sessions_path) do |f| %>
+  <div class="field">
+    <%= f.label :email, "eMail" %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :password, "Mot de passe" %><br />
+    <%= f.password_field :password %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Sign in" %>
+  </div>
+</div>
+<% end %>

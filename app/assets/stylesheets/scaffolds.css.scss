@@ -1,0 +1,135 @@
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  width: 1000px;
+  margin: auto
+}
+
+body.webapp {
+  background-color: #fff !important;
+  color: #333 !important;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  width: 1000px;
+  margin: auto !important
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+.messages td.webapp{
+  max-width: 525px;
+  border: 0 solid #D8D8D8 ;
+  border-bottom: 2px solid #D8D8D8 ;
+}
+
+td.from_mail {
+  width: 350px;
+}
+
+td.subject_mail {
+  width: 465px;
+}
+
+.messages tr:hover.webapp
+{
+  font-weight:bold;
+}
+
+.messages table {
+  width: 100%;
+}
+
+.messages {
+  overflow: auto;
+  max-height: 800px;
+}
+
+#inbox_container, #inbox_header {
+  width:100%;
+}
+
+#inbox_header {
+  min-height: 100px;
+  border-bottom: solid 2px #D8D8D8;
+}
+
+#inbox_container {
+  margin-top: 100px;
+  border: solid 2px #D8D8D8
+}
+
+#menu ul li {
+  display: inline;
+}
+
+#menu ul {
+  padding: 0;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+#error {
+  color: red;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
